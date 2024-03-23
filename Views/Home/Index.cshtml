@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model Mission11_Naumann.Models.ViewModels.BooksListViewModel
+
+<h1>Bookstore</h1>
+
+
+@foreach (Book b in Model)
+{
+    <h3>@b.Title</h3>
+    <ul>
+        <li>Author: @b.Author</li>
+        <li>Publisher: @b.Publisher</li>
+    </ul>
+        
+}
+
+<a asp-controller="Home" asp-action="Index" asp-route-pageNum="1">1</a>
+<a asp-controller="Home" asp-action="Index" asp-route-pageNum="2">2</a>
+<a asp-controller="Home" asp-action="Index" asp-route-pageNum="3">3</a>
